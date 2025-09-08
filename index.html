@@ -6,22 +6,22 @@
   <title>Zobot Test</title>
 </head>
 <body>
-  <h1>Testing My Zobot</h1>
+  <h1>Testing My chatwoot</h1>
 
-  <!-- Paste your Zobot widget script here -->
 <script>
-  window.$zoho = window.$zoho || {};
-  $zoho.salesiq = $zoho.salesiq || {
-    ready: function() {
-      // هنا بتحط اسم الـ Department بالظبط زي ما مكتوب في SalesIQ
-      $zoho.salesiq.department("Sprinters FG");
+  (function(d,t) {
+    var BASE_URL="https://app.chatwoot.com";
+    var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=BASE_URL+"/packs/js/sdk.js";
+    g.async = true;
+    s.parentNode.insertBefore(g,s);
+    g.onload=function(){
+      window.chatwootSDK.run({
+        websiteToken: 'e9CGFVdaBg5bnMJdV8xA5c11',
+        baseUrl: BASE_URL
+      })
     }
-  };
-</script>
-
-<script id="zsiqscript" 
-  src="https://salesiq.zohopublic.com/widget?wc=siq235d9091ddf54a0c74abef4b56f27881ea89be0ded44359aadc5d1db2b749ac3" 
-  defer>
+  })(document,"script");
 </script>
 
 
